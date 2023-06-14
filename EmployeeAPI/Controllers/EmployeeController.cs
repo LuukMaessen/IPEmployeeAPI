@@ -7,7 +7,7 @@ using System.Web.Http.Cors;
 
 namespace EmployeeAPI.Controllers
 {
-    [EnableCors(origins: "http://localhost:3000", headers: "*", methods: "*")]
+    //[EnableCors(origins: "https://localhost:3000", headers: "*", methods: "*")]
     [Route("api/[controller]")]
     [ApiController]
     public class EmployeeController : ControllerBase

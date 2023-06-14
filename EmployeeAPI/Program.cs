@@ -16,11 +16,13 @@ public class Program
         builder.Services.AddDbContext<EmployeeDbContext>(
             o => o.UseSqlServer(builder.Configuration.GetConnectionString("LCorpDbTest")));
 
-        builder.Services.AddCors(setup =>
+        builder.Services.AddCors(options =>
         {
-            setup.AddDefaultPolicy(policyBuilder =>
+            options.AddDefaultPolicy(builder =>
             {
-                policyBuilder.WithOrigins("http://localhost:3000");
+                builder.WithOrigins("https://localhost:3000")
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
             });
         });
 
