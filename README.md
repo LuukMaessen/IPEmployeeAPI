@@ -1,2 +1,2 @@
 # IPEmployeeAPI
-one of the api's for the ip
+This repository is implementing an API to fetch, add, update and delete employees.
